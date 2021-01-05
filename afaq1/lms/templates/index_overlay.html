@@ -1,0 +1,14 @@
+<%page expression_filter="h"/>
+
+<%!
+from django.utils.translation import ugettext as _
+from openedx.core.djangolib.markup import HTML, Text
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
+%>
+<%
+home_page_title = configuration_helpers.get_value('home_page_title', 'Afaq Online')
+home_page_subtitle = configuration_helpers.get_value('home_page_subtitle', 'Steer Your Carrer')
+%>
+
+<h1>${home_page_title}</h1>
+<p class="title-sub">${home_page_subtitle}</p>
